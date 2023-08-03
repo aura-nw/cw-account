@@ -1,0 +1,31 @@
+accounts:
+  - name: Cantho
+    coins: ["50000000000000uaura", 50000000000000stake]
+  - name: Vinh
+    coins: ["50000000000000uaura"]
+  - name: Hagiang
+    coins: ["50000000000000uaura"]
+  - name: Thaibinh
+    coins: ["50000000000000uaura"]
+validator:
+  name: Cantho
+  staked: "10000000000stake"
+client:
+  openapi:
+    path: "docs/static/openapi.yml"
+init:
+  app:
+    minimum-gas-prices: "0.001uaura"
+genesis:
+  chain_id: "testnet"
+  app_state:
+    smartaccount:
+      params:
+        whitelist_code_id: [
+          {
+            code_id: 1,
+            status: true
+          }
+        ]
+        max_gas_execute: 2000000
+      smart_account_id: 0
